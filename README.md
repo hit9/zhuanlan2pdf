@@ -53,11 +53,11 @@ $ zl2pdf happy
 
 The generated PDF can be found here: https://www.dropbox.com/s/yj3bzlqudlgvmlj/happy.pdf
 
-Note
------
+Pool Size Option
+----------------
 
-If the count of posts is large, for instance: 130, you can set `pool-size` to
-`130`:
+If the count of posts is large, for instance: 130, you can set `--pool-size` to
+`130` to get fast downloading speed:
 
 ```bash
 $ zl2pdf xxxx --pool-size=130
