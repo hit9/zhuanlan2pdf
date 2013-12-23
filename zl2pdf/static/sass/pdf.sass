@@ -1,0 +1,57 @@
+@import base
+@import normalize
+@import markdown
+
+body
+  font: 15px/1.7 "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, Sans-serif
+  background: #fff
+  color: $black
+  font-weight: 400
+
+a
+  text-decoration: none
+
+a:link
+  color: $red
+  text-decoration: none
+
+a:hover
+  color: $red
+  text-decoration: underline
+
+a:visited
+  color: $red
+
+.container, .content
+  width: $width
+  margin: 0 auto
+
+.cut
+  clear: both
+  color: #aaa
+  text-align: center
+  letter-spacing: 3px
+  margin: 0
+  margin-top: 15px
+  font-size: 24px
+  opacity: .6
+
+.content
+  h1.title
+    +ofl-font(27px)
+    text-align: center
+    display: block
+    margin: 40px 0 24px
+    font-weight: 600
+  p.post-meta 
+    +ofl-font(15px)
+    font-style: italic
+    text-align: center
+    margin: 5px 0 30px 0
+    .author, .date
+      margin-left: 7px
+      margin-right: 7px
+
+  div.title-pic-container, img.title-pic
+    width: $width
+    text-align: center

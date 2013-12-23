@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>{{column.name}} | {{column.description}}</title>
+    <style type="text/css" media="all">
+      .cut {
+        page-break-after: always;
+      }
+      {# Due to wkhtmltopdf, font from google can only load this way :( #}
+      @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 400;
+        src: url('{{static_path}}/static/fonts/SourceSansPro-Regular.otf') format('truetype');
+      }
+      @font-face {
+        font-family: 'OFL Sorts Mill Goudy TT';
+        font-style: normal;
+        font-weight: 400;
+        src: url('{{static_path}}/static/fonts/OFLGoudyStMTT.ttf') format('truetype');
+      }
+      @font-face {
+        font-family: 'OFL Sorts Mill Goudy TT';
+        font-style: italic;
+        font-weight: 400;
+        src: url('{{static_path}}/static/fonts/OFLGoudyStMTT-Italic.ttf' ) format('truetype');
+      }
+    </style>
+    {# Due to wkhtmltopdf, this path should be absolute #}
+    <link rel="stylesheet" href="{{static_path}}/static/css/pdf.css" type="text/css" media="all"/>
+  </head>
+<body>
+  <div class="container">
+    <div class="content">
+      {% for post in posts %}
+        <h1 class="title">{{post.title}}</h1>
+        <p class="post-meta">
+          <span class="date">{{post.published_at.strftime("%b  %d, %y")}} </span>
+          <span class="author"> {{post.author}} </span>
+        </p>
+        {% if post.title_pic %}
+          <div class="title-pic-container">
+            <img src="{{post.title_pic}}" alt="{{post.title}}" class="title-pic"/>
+          </div>
+        {% endif %}
+        <div class="post-html">
+          {{post.content}}
+        </div>
+        <div class="cut">* * *</div>
+       {% endfor %}
+    </div>
+  </div>
+</body>
+</html>

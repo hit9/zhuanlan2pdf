@@ -1,0 +1,9 @@
+include README.md requirements.txt
+recursive-include zl2pdf/static *
+recursive-exclude zl2pdf .*.swp
+recursive-exclude zl2pdf .*.swo
+recursive-exclude venv *
+recursive-exclude dist *
+recursive-exclude build *
+recursive-exclude zl2pdf.egg-info *
+recursive-exclude zl2pdf/static/.sass-cache *

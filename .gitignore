@@ -5,3 +5,6 @@ venv
 test*
 .sass-cache
 *.pdf
+build
+dist
+zl2pdf.egg-info
