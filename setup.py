@@ -10,7 +10,7 @@ setup(
     version=__version__,
     author='hit9',
     author_email='nz2324@126.com',
-    description='Port zhuanglan.zhihu.com to PDF',
+    description='Port zhuanlan.zhihu.com to PDF',
     license='BSD',
     keywords='zhihu, zhuanlan, pdf',
     url='http://github.com/hit9/zhuanlan2pdf',
