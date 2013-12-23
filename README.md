@@ -1,8 +1,8 @@
 zhuanlan2pdf
 ------------
 
-Port your Zhihu ZhuanLan to PDF, attempting to get offline version of
-`zhanglan.zhihu.com/{some-zhuanlan-short_url_name}`
+Port your Zhihu ZhuanLan to PDF. We can read some zhuanlan in PDF version,
+offline.
 
 **NOTE:** All rights reserved by posts' authors and zhihu.com.
 
@@ -52,6 +52,16 @@ $ zl2pdf happy
 ```
 
 The generated PDF can be found here: https://www.dropbox.com/s/yj3bzlqudlgvmlj/happy.pdf
+
+Note
+-----
+
+If the count of posts is large, for instance: 130, you can set `pool-size` to
+`130`:
+
+```bash
+$ zl2pdf xxxx --pool-size=130
+```
 
 声明
 ----
