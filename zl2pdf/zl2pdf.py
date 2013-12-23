@@ -34,7 +34,7 @@ from .exceptions import *
 
 class Zl2PDF(object):
 
-    def __init__(self, slug, pool_size=30):  # default poo size: 15
+    def __init__(self, slug, pool_size=20):  # default pool size: 20
         self.slug = slug
         self.column = Column(slug=self.slug)
         self.posts = []

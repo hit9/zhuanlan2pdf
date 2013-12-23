@@ -45,6 +45,8 @@ Options:
 Sample Usage
 -------------
 
+Download http://zhuanlan.zhihu.com/happy to `happy.pdf`:
+
 ```bash
 $ zl2pdf happy
 ```
