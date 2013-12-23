@@ -1,0 +1,7 @@
+venv
+.*.swp
+.*.swo
+*.pyc
+test*
+.sass-cache
+*.pdf
