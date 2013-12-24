@@ -4,9 +4,6 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>{{column.name}} | {{column.description}}</title>
     <style type="text/css" media="all">
-      .cut {
-        page-break-after: always;
-      }
       {# Due to wkhtmltopdf, font from google can only load this way :( #}
       @font-face {
         font-family: 'Source Sans Pro';
@@ -26,9 +23,14 @@
         font-weight: 400;
         src: url('{{static_path}}/static/fonts/OFLGoudyStMTT-Italic.ttf' ) format('truetype');
       }
+
+      img {
+        page-break-inside: avoid !important;
+      }
     </style>
     {# Due to wkhtmltopdf, this path should be absolute #}
     <link rel="stylesheet" href="{{static_path}}/static/css/pdf.css" type="text/css" media="all"/>
+
   </head>
 <body>
   <div class="container">
@@ -40,8 +42,8 @@
           <span class="author"> {{post.author}} </span>
         </p>
         {% if post.title_pic %}
-          <div class="title-pic-container">
-            <img src="{{post.title_pic}}" alt="{{post.title}}" class="title-pic"/>
+          <div class="title-pic-container" style="position: relative">
+            <img style="position: relative" src="{{post.title_pic}}" alt="{{post.title}}" class="title-pic"/>
           </div>
         {% endif %}
         <div class="post-html">
