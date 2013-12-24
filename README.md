@@ -53,6 +53,10 @@ $ zl2pdf happy
 
 The generated PDF can be found here: https://www.dropbox.com/s/yj3bzlqudlgvmlj/happy.pdf
 
+Another DEMO:
+
+- [知乎周刊](http://zhuanlan.zhihu.com/Weekly) PDF: https://www.dropbox.com/s/skvdpii0lmi8sh5/Weekly.pdf
+
 Pool Size Option
 ----------------
 
