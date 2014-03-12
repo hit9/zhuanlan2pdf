@@ -13,6 +13,11 @@ This tool requires `wkhtmltopdf`, on Ubuntu:
 
     sudo apt-get install wkhtmltopdf
 
+on OSX:
+
+    brew tap homebrew/boneyard
+    brew install wkhtmltopdf
+
 OS Dependency
 -------------
 
