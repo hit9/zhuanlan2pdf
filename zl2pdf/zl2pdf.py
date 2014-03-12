@@ -1,7 +1,7 @@
 # coding=utf8
 
 """
-    zl2pdf.zl2pdf
+
     ~~~~~~~~~~~~~
 
     The core worker.
@@ -18,7 +18,6 @@ import sys
 import time
 import subprocess
 
-import gevent
 import requests
 from gevent.pool import Pool
 from gevent import monkey
@@ -41,14 +40,9 @@ class Zl2PDF(object):
         self.pool_size = pool_size
         self.out = self.slug + '.pdf'  # output filename
         self.cmd = ['wkhtmltopdf',
-                         '-',
-                         # '--quiet',  # Be less verbose
-                         '--page-size',  # Set paper size to: A4
-                         'A4',
-                         '--outline',
-                         '--outline-depth',  # Set the depth of the outline
-                         '2',
-                         self.out]
+                    '-',
+                    # '--quiet',  # Be less verbose
+                    self.out]
         self.html = None
         self.lib_path = os.path.normpath(
             os.path.abspath(os.path.dirname(__file__)))
